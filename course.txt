@@ -1,0 +1,361 @@
+Here is your **complete, ready-to-publish curriculum** for both tracks. You can literally copy this into your landing page, course brochure, and onboarding docs.
+
+---
+
+# 🎓 AUTONOMOUSX AI ACADEMY  YEAR-LONG CURRICULUM
+
+## Track 1: **AI Builders Jr.** (Ages 10–18)
+*From first website to running AI models  no prior coding required.*
+
+## Track 2: **AI Engineers Pro** (Ages 18+ / Adults)
+*Full-stack engineering + production AI/LLM deployment. Assumes zero coding background but moves fast.*
+
+---
+
+# 🧒 TRACK 1: AI BUILDERS JR. (10–18 Years)
+
+**Goal:** By the end of the year, every student has a live website portfolio, has built a simple game or app with AI integration, understands how computers actually work (hardware), and can confidently use modern AI tools to create things.
+
+**Pace:** 2 hours/week live + 1 hour/week assignment. Age-appropriate, project-driven, no boring theory.
+
+---
+
+## **QUARTER 1: Build & Ship with AI**
+*Months 1–3 | Theme: "I can make the internet."*
+
+### Month 1: Vibe Coding & First Websites
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 1 | What is the web? How do websites work? Intro to AI-assisted coding (Cursor, Bolt.new, v0, Lovable). | A personal "About Me" page using AI prompts. |
+| 2 | HTML structure with AI help. Tags, images, links. | A photo gallery page for their hobby. |
+| 3 | CSS styling with AI. Colors, fonts, layouts. | A styled landing page for a fake pizza shop. |
+| 4 | Responsive design basics. Mobile vs desktop. | A portfolio homepage (live on Vercel). |
+
+**Deliverable:** Live personal website deployed on Vercel.
+
+### Month 2: Python  The Language of AI
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 5 | Python setup (VS Code + Replit). Variables, print, input. | A chatbot that asks your name and favorite color. |
+| 6 | Loops (for/while) and conditionals (if/else). | A number guessing game. |
+| 7 | Lists, dictionaries, simple data. | A "Top 5 Movies" list with ratings. |
+| 8 | Functions and modules. | A mini calculator with +, −, ×, ÷. |
+
+**Deliverable:** A Python text-based game (Guess the Number or Quiz).
+
+### Month 3: Ship It  Deployment & Git Basics
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 9 | What is Git? Saving code history with GitHub. | Push their Python game to GitHub. |
+| 10 | Deploying Python apps online. | Deploy a simple Streamlit app. |
+| 11 | Connecting frontend + backend basics. | A "Joke Generator" site (HTML frontend, Python API). |
+| 12 | Quarter 1 Review + Show & Tell. | Present their portfolio + game to the batch. |
+
+**Deliverable:** GitHub profile + 2 live projects.
+
+---
+
+## **QUARTER 2: The Hardware & AI Tools Universe**
+*Months 4–6 | Theme: "I understand the machine and the magic."*
+
+### Month 4: Hardware Deep Dive  Rohit's Special Module
+| Week | Topic | Activity |
+|------|-------|----------|
+| 13 | CPU Architecture: What is U, H, HX, P series? Cores, threads, clock speed. | Benchmark their own laptop vs a friend's. |
+| 14 | Memory: DDR4 vs DDR5 vs LPDDR5X. Why soldered RAM matters. Cache (L1/L2/L3). | Create a "Best Laptop for Coding" comparison chart. |
+| 15 | GPUs vs TPUs: What is VRAM? Why 8GB vs 16GB matters. What does a TPU do? | Draw a diagram: CPU vs GPU vs TPU. |
+| 16 | Storage & Thermals: SSD vs HDD, throttling, why gaming laptops die fast on battery. | Diagnose their own machine's specs using tools. |
+
+**Deliverable:** A blog post/video: *"The Perfect Student Laptop Under ₹50,000/$600."*
+
+### Month 5: AI Tools Mastery (The Modern Toolbox)
+| Week | Topic | Activity |
+|------|-------|----------|
+| 17 | ChatGPT, Claude, Gemini: How to ask properly (not just prompting  task delegation). | Use AI to write a story, then critique it. |
+| 18 | Codex & GitHub Copilot: AI that writes code with you. | Build a to-do list app using only AI assistance. |
+| 19 | NotebookLM & Perplexity: Research and learning with AI. | Create a study guide for their hardest subject using NotebookLM. |
+| 20 | AntiGravity & OpenClaw: Advanced research and agent tools. | Find 10 facts about a topic and verify with AI. |
+
+**Deliverable:** A "My AI Toolkit" Notion page showing 5 completed projects using different AI tools.
+
+### Month 6: AI Creation  Art, 3D, and Games
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 21 | AI Image Generation: Midjourney, Stable Diffusion basics, prompts. | 10 AI-generated images for their portfolio. |
+| 22 | 3D AI: Tencent Pixel-3D, Meshy, Sloyd. | A 3D character or object for a game. |
+| 23 | AI in Game Development: Using AI assets in Roblox/Unity/Godot. | A simple 3D scene with AI textures. |
+| 24 | Quarter 2 Review: Hardware + AI Tools demo day. | Present: "I made this with AI." |
+
+**Deliverable:** A 3D asset + AI art gallery.
+
+---
+
+## **QUARTER 3: Junior AI Practitioner**
+*Months 7–9 | Theme: "I can talk to the brain (models)."*
+
+### Month 7: Python for Data & AI
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 25 | Pandas basics: Reading CSVs, filtering data. | Analyze a dataset of their favorite sports players. |
+| 26 | NumPy basics: Arrays, simple math on data. | A grade calculator that handles 100 students. |
+| 27 | Matplotlib: Charts and graphs. | Visualize their screen time or gaming stats. |
+| 28 | APIs: What is an API? Calling a weather API. | A Python script that tells them today's weather. |
+
+**Deliverable:** A data analysis project with charts.
+
+### Month 8: Cloud GPUs  Touching Real AI Compute
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 29 | Google Colab: Using a FREE T4 GPU. Running code in the cloud. | Run a pre-written image classifier on Colab. |
+| 30 | Kaggle: Datasets, notebooks, free GPU hours. | Enter a beginner Kaggle competition. |
+| 31 | Lightning AI: Free H100 credits, what is a GPU cluster? | Run a text-generation model on Lightning AI. |
+| 32 | Understanding GPU specs: Why A100 > T4, VRAM limits. | Create a "GPU Tier List" for AI beginners. |
+
+**Deliverable:** A Colab notebook + Kaggle profile + first competition submission.
+
+### Month 9: Open Source Models & HuggingFace
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 33 | What is HuggingFace? Model cards, spaces, datasets. | Create a HuggingFace account, explore 5 models. |
+| 34 | Using small models: DistilBERT, TinyLlama, Phi-2. | A sentiment analyzer: "Is this movie review happy or sad?" |
+| 35 | What are LLMs? How do they "think"? (Simplified transformers). | Draw/explain how a transformer works in their own words. |
+| 36 | Running models via API vs locally. | A "Ask the AI" web app using a free HuggingFace API. |
+
+**Deliverable:** A live web app that uses a real AI model to answer questions.
+
+---
+
+## **QUARTER 4: Capstone & Real-World Projects**
+*Months 10–12 | Theme: "I am an AI Builder."*
+
+### Month 10: AI Agents & Automation
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 37 | What is an AI Agent? Planner → Action → Feedback. | A simple agent that searches Wikipedia and summarizes. |
+| 38 | Kimi Agent basics (using the web interface). | An agent workflow that plans a weekend trip. |
+| 39 | No-code automation: Make, Zapier with AI. | An automation that emails them daily AI news. |
+| 40 | Building a simple agent team. | A "Homework Helper" agent that breaks tasks down. |
+
+**Deliverable:** A working AI agent project.
+
+### Month 11: Game Dev + 3D AI Integration
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 41 | Game design basics with AI assets. | A platformer level using AI-generated sprites. |
+| 42 | Adding AI NPCs: Characters that "talk" using small models. | An NPC in their game that answers questions. |
+| 43 | 3D worlds: Using AI for textures, skyboxes, objects. | A small 3D explorable world. |
+| 44 | Testing and polish. | Playtest a classmate's game. |
+
+**Deliverable:** A playable mini-game with AI-generated assets.
+
+### Month 12: Capstone, Portfolio, Graduation
+| Week | Topic | What They Build |
+|------|-------|---------------|
+| 45 | Portfolio assembly: GitHub, personal site, project demos. | A polished portfolio website. |
+| 46 | Presentation skills: Demoing like a founder. | 3-minute pitch of their best project. |
+| 47 | Final project week: Build anything with AI help. | **THE CAPSTONE** |
+| 48 | Graduation Demo Day: Present to the whole academy. | Live demo + certificate. |
+
+**Final Deliverables:**
+- Live portfolio website
+- GitHub with 6+ projects
+- 1 deployed AI-powered app
+- 1 game or 3D scene
+- **Certificate: AI Builder Jr.**
+
+---
+
+# 👨‍💻 TRACK 2: AI ENGINEERS PRO (18+ / Adults)
+*From zero to shipping AI SaaS. Heavy coding. Production-grade deployment.*
+
+**Goal:** By the end of the year, every student has shipped **3 complete SaaS products**, understands LLM architecture, can fine-tune models, deploy on cloud GPU clusters, and has a GitHub profile that gets them hired or funded.
+
+**Pace:** 2 hours/week live + 3–4 hours/week self-work. This is a bootcamp, not a hobby class.
+
+---
+
+## **QUARTER 1: Full-Stack Engineering**
+*Months 1–3 | Theme: "I can build anything on the web."*
+
+### Month 1: Frontend Mastery
+| Week | Topic | Stack | What They Build |
+|------|-------|-------|-----------------|
+| 1 | HTML5 semantic structure, accessibility, SEO basics. | VS Code, Cursor | A landing page for a product. |
+| 2 | CSS3: Flexbox, Grid, animations, variables. | Pure CSS | A responsive dashboard layout. |
+| 3 | JavaScript ES6+: Variables, functions, async/await, DOM. | Vanilla JS | An interactive to-do app. |
+| 4 | TypeScript basics: Types, interfaces, generics intro. | TS | Refactor the to-do app to TypeScript. |
+
+**Deliverable:** A type-safe interactive web app.
+
+### Month 2: React & Modern Frontend
+| Week | Topic | Stack | What They Build |
+|------|-------|-------|-----------------|
+| 5 | React fundamentals: Components, props, state, hooks. | React + Vite | A job board UI. |
+| 6 | Next.js 14: App router, server components, SSR/SSG. | Next.js | A blog with markdown support. |
+| 7 | Styling: Tailwind CSS, shadcn/ui, dark mode. | Tailwind | A polished SaaS landing page clone. |
+| 8 | Forms & Validation: React Hook Form, Zod. | RHF + Zod | A multi-step onboarding form. |
+
+**Deliverable:** A Next.js marketing site + dashboard UI.
+
+### Month 3: Backend, Databases & Auth
+| Week | Topic | Stack | What They Build |
+|------|-------|-------|-----------------|
+| 9 | Backend basics: FastAPI vs Node.js. REST API design. | FastAPI | A JSON API with 5 endpoints. |
+| 10 | Databases: PostgreSQL (Neon), MongoDB, ORMs (Prisma). | Neon + Prisma | A user database with relations. |
+| 11 | Auth: Clerk, OAuth, JWT, protected routes. | Clerk + Next.js | A login system with roles. |
+| 12 | Deployment: Vercel, Railway, custom domains, CI/CD basics. | GitHub Actions | A deployed full-stack app. |
+
+**Deliverable:** **SaaS Product #1:** A simple CRUD app with auth, database, deployed live.
+
+---
+
+## **QUARTER 2: Python & AI Core**
+*Months 4–6 | Theme: "I understand the engine under the hood."*
+
+### Month 4: Advanced Python for AI
+| Week | Topic | What They Code |
+|------|-------|----------------|
+| 13 | OOP deep dive: Classes, inheritance, dataclasses, Pydantic. | A data pipeline class system. |
+| 14 | Functional Python: Decorators, generators, itertools. | A memory-efficient data processor. |
+| 15 | Async Python: asyncio, aiohttp, concurrent execution. | A scraper that hits 100 URLs in parallel. |
+| 16 | Python for data: Pandas, NumPy, Matplotlib, Seaborn. | A data visualization dashboard. |
+
+**Deliverable:** A Python CLI tool + data analysis notebook.
+
+### Month 5: PyTorch  Building Neural Networks
+| Week | Topic | What They Code |
+|------|-------|----------------|
+| 17 | Tensors, GPU acceleration (CUDA basics), autograd. | A tensor math engine on GPU. |
+| 18 | Building a neural net from scratch (no `nn.Module`). | A digit classifier (MNIST) from scratch. |
+| 19 | PyTorch `nn.Module`, optimizers, training loops. | A proper image classifier with `DataLoader`. |
+| 20 | Transfer learning: Fine-tuning ResNet, saving models. | A cat vs dog classifier with 95% accuracy. |
+
+**Deliverable:** A trained image model + training log.
+
+### Month 6: JAX & Distributed Thinking
+| Week | Topic | What They Code |
+|------|-------|----------------|
+| 21 | JAX basics: NumPy on steroids, `jit`, `grad`, `vmap`. | A function optimizer using `grad`. |
+| 22 | `pmap` and multi-device programming. | A parallel computation across CPU cores. |
+| 23 | Why TPUs? TPU architecture vs GPU. JAX on TPU (Colab TPU v2). | A matrix multiplication benchmark: CPU vs GPU vs TPU. |
+| 24 | Scaling laws intro: Why bigger models need more data. | A presentation: "How I would train a 1B model." |
+
+**Deliverable:** A JAX benchmark report + a TPU-trained small model.
+
+---
+
+## **QUARTER 3: LLM Engineering & Production AI**
+*Months 7–9 | Theme: "I control the large models."*
+
+### Month 7: HuggingFace Ecosystem
+| Week | Topic | What They Build |
+|------|-------|-----------------|
+| 25 | Transformers library: Pipelines, tokenizers, model cards. | A sentiment analysis API. |
+| 26 | Fine-tuning with PEFT/LoRA: Cheap adaptation of big models. | A fine-tuned model for their domain (e.g., medical QA). |
+| 27 | Datasets library: Processing 10GB+ data efficiently. | A cleaned dataset for training. |
+| 28 | Tokenizers: BPE, WordPiece, building a custom tokenizer. | A tokenizer trained on their own text corpus. |
+
+**Deliverable:** A fine-tuned model on HuggingFace Hub.
+
+### Month 8: Local LLMs & Optimization
+| Week | Topic | What They Build |
+|------|-------|-----------------|
+| 29 | Ollama: Running Llama 3.1, Qwen 2.5, Mistral locally. | A local chatbot web UI. |
+| 30 | Quantization: GGUF, 4-bit, 8-bit loading. Why it matters. | A quantized model that runs on 8GB VRAM. |
+| 31 | Unsloth: 2× faster fine-tuning, 70% less memory. | A fine-tuned chatbot using Unsloth on Colab. |
+| 32 | vLLM & TGI: Production inference servers. | A local inference API serving a 7B model. |
+
+**Deliverable:** A local LLM stack (Ollama + web UI) running on their laptop or a cloud VM.
+
+### Month 9: Advanced Model Usage & Architecture
+| Week | Topic | What They Build |
+|------|-------|-----------------|
+| 33 | **Kimi K2.6** (1T MoE): Agentic mode, long context, tool use. | An agent that reads a PDF and answers questions. |
+| 34 | **Qwen Coder 480B**: Why it beats GPT-4 at coding tasks. | A code review bot using Qwen API. |
+| 35 | **DeepSeek-V4 / Minimax 2.7**: MoE architectures, cost efficiency. | A cost comparison: API costs per 1M tokens across providers. |
+| 36 | RAG systems: Vector DBs (Pinecone, Weaviate, pgvector), embeddings. | A "Chat with my PDF" SaaS feature. |
+
+**Deliverable:** **SaaS Product #2:** An AI knowledge base with RAG, local + API model fallback, deployed live.
+
+---
+
+## **QUARTER 4: Shipping Real Businesses**
+*Months 10–12 | Theme: "I ship products that make money."*
+
+### Month 10: AI SaaS #3  The Agent Product
+| Week | Topic | What They Build |
+|------|-------|-----------------|
+| 37 | AI Agents: Planner-Action-Feedback loops, tool calling. | A multi-step research agent. |
+| 38 | Agent Swarms: Kimi multi-agent, AutoGen, CrewAI basics. | A team of 3 agents that write a blog post together. |
+| 39 | Browser automation: Playwright + AI agents. | An agent that books a flight or scrapes LinkedIn. |
+| 40 | Payments & SaaS logic: Stripe integration, credits system. | A paid AI agent service with usage limits. |
+
+**Deliverable:** **SaaS Product #3:** A multi-agent automation tool with Stripe billing.
+
+### Month 11: 3D AI, Edge & Specialized Models
+| Week | Topic | What They Build |
+|------|-------|-----------------|
+| 41 | 3D AI: Tencent Pixel-3D, Meshy, generating game assets. | A 3D asset pipeline for a web game. |
+| 42 | Multimodal models: Vision-language, audio-to-text. | An app that describes images aloud. |
+| 43 | Edge deployment: Running small models on web (ONNX, Transformers.js). | A client-side AI feature (no server). |
+| 44 | Monitoring & Observability: Logging, error tracking, analytics. | Production-grade monitoring for their SaaS. |
+
+**Deliverable:** A 3D/multimodal AI feature added to their SaaS.
+
+### Month 12: Capstone, Scale & Graduation
+| Week | Topic | What They Do |
+|------|-------|--------------|
+| 45 | Performance optimization: Caching, CDN, DB indexing, rate limiting. | Optimize their SaaS to handle 1000 users. |
+| 46 | Security: API key management, env vars, SQL injection, XSS. | A security audit of their own app. |
+| 47 | Final build week: Polish, documentation, GitHub README. | **THE CAPSTONE** |
+| 48 | Demo Day: 5-minute pitch to the academy + guests. | Live demo + **Certificate: AI Engineer Pro** |
+
+**Final Deliverables:**
+- **3 deployed SaaS products** (live URLs)
+- **GitHub profile** with 15+ production-grade repos
+- **1 fine-tuned open-source model** on HuggingFace
+- **1 technical blog post** (e.g., "How I reduced inference costs by 60%")
+- **Portfolio:** `rohitsstudent.dev` style site showing all work
+
+---
+
+# 🛠️ TOOLS & PLATFORMS USED (Both Tracks)
+
+| Category | Kids Track | Adults Track |
+|----------|-----------|--------------|
+| **IDEs** | Replit, Cursor, VS Code | Cursor, VS Code, PyCharm |
+| **AI Coding** | Bolt.new, Lovable, v0 | Bolt.new, Lovable, v0 + custom workflows |
+| **Frontend** | HTML/CSS/JS basics | React, Next.js, Tailwind, TypeScript |
+| **Backend** | Streamlit (simple) | FastAPI, Node.js, PostgreSQL, MongoDB |
+| **Auth** | None (simple) | Clerk, OAuth, JWT |
+| **Deployment** | Vercel, Streamlit Cloud | Vercel, Railway, AWS, Docker |
+| **Python** | Basics, simple games | Advanced, OOP, async, Pydantic |
+| **AI/ML** | Colab T4, HuggingFace API | PyTorch, JAX, TPU, GPU clusters |
+| **Local LLMs** | Concept only | Ollama, Unsloth, vLLM, GGUF |
+| **Models Used** | TinyLlama, DistilBERT, Phi-2 | Kimi K2.6, Qwen Coder, DeepSeek, Minimax, Llama 70B |
+| **3D/GenAI** | Tencent Pixel, Midjourney | Tencent Pixel, Meshy, Stable Diffusion API |
+| **Cloud GPU** | Colab (T4), Kaggle | Colab (T4/A100), Lightning AI (H100), Kaggle |
+| **Agent Tools** | Kimi basic, simple automations | Kimi Agent Swarm, AutoGen, Playwright |
+| **Hardware** | Laptop specs, GPU/TPU basics | TPU v4/v6e architecture, VRAM optimization, DDR5 vs LPDDR5X |
+
+---
+
+# 📋 ASSESSMENT & PROGRESSION
+
+| Milestone | Kids Track | Adults Track |
+|-----------|-----------|--------------|
+| **Monthly** | Show & Tell (present project) | Code review session (live debugging) |
+| **Quarterly** | Badge system (Web Builder, Pythonista, AI Explorer) | Deployed product + written case study |
+| **Final** | Portfolio + Demo Day | 3 SaaS products + GitHub + Blog + Demo Day |
+
+---
+
+# 🎯 HOW TO USE THIS IN YOUR BUSINESS
+
+1. **Copy the Quarter 1 curriculum** into your landing page as "What You'll Learn."
+2. **Use the hardware module** as your differentiator. No other AI course teaches L1/L2/L3 cache and TPU architecture.
+3. **For kids' parents:** Emphasize "They build real websites and games, not just prompt ChatGPT."
+4. **For adults:** Emphasize "You ship 3 SaaS products using the same stack as $10M AI startups."
+5. **Pricing anchor:** The Kids track is $25. The Adults track, with PyTorch/JAX/3 SaaS builds, should be **$35** even at launch. It is a bootcamp, not a class.
+
+This curriculum justifies every dollar you charge. Go publish it.
