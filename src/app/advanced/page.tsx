@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { TRACKS } from "@/data/tracks";
+import DemoBooking from "@/components/DemoBooking";
 
 const track = TRACKS.advanced;
 
@@ -153,25 +154,10 @@ export default function AdvancedPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <div className="glass-card p-10 glow-blue">
-            <h3 className="text-2xl font-extrabold text-text mb-3">Ready to Build Production AI?</h3>
-            <p className="text-text-muted mb-6">
-              Join the Advanced AI Track and ship 3 SaaS products, fine-tune LLMs, and master production AI.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="#contact" className="btn-gradient no-underline">
-                Book a Demo
-              </Link>
-              <Link href="/#pricing" className="btn-outline no-underline">
-                View Pricing  $40/mo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
+      {/* Demo Booking Section */}
+      <DemoBooking />
     </>
   );
 }
