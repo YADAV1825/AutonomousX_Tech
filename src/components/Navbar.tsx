@@ -107,8 +107,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-strong ${
-        scrolled ? "shadow-lg" : "shadow-sm border-b border-border/10"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+        scrolled ? "shadow-lg border-b border-black/5" : "shadow-sm border-b border-border/10"
       } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
@@ -172,7 +172,7 @@ export default function Navbar() {
 
       {/* Mobile Quick Nav Strip — visible below lg, hidden when drawer open */}
       {!mobileOpen && (
-        <div className="lg:hidden overflow-x-auto scrollbar-hide border-t border-border/30">
+        <div className="lg:hidden overflow-x-auto scrollbar-hide border-t border-border/30 bg-white">
           <nav
             className="flex items-center gap-1 px-2 py-2 w-max min-w-full mx-auto justify-center"
             aria-label="Quick navigation"
@@ -181,7 +181,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex-shrink-0 px-2.5 py-1 text-[11px] font-semibold text-text-muted bg-white/50 hover:bg-white/80 hover:text-text rounded-xl transition-all no-underline border border-border/40 text-center flex flex-col items-center justify-center leading-[1.2]"
+                className="flex-shrink-0 px-2.5 py-1 text-[11px] font-semibold text-text-muted bg-black/[0.02] hover:bg-black/[0.05] hover:text-text rounded-xl transition-all no-underline border border-black/15 text-center flex flex-col items-center justify-center leading-[1.2]"
               >
                 {link.label === "Foundation Track" ? (
                   <><span>Foundation</span><span>Track</span></>
