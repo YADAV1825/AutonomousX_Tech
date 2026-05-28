@@ -15,16 +15,32 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const drawerRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 20);
+
+      // Hide navbar when scrolling down past 80px, show when scrolling up
+      // Don't hide if mobile menu is open
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80 && !mobileOpen) {
+        setHidden(true);
+      } else if (currentScrollY < lastScrollY.current || currentScrollY <= 80) {
+        setHidden(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [mobileOpen]);
 
   // Close on route change
   useEffect(() => {
@@ -93,7 +109,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-strong ${
         scrolled ? "shadow-lg" : "shadow-sm border-b border-border/10"
-      }`}
+      } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
