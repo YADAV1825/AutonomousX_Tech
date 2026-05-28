@@ -17,19 +17,50 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "AutonomousX AI Academy  Learn AI, Build Real Products",
+  metadataBase: new URL("https://www.autonomousx.tech"),
+  title: {
+    default: "AutonomousX AI Academy | Learn AI & Build Real Products",
+    template: "%s | AutonomousX AI Academy"
+  },
   description:
-    "Master AI tools, build real websites & SaaS products, and future-proof your career with hands-on AI bootcamps. Foundation Track (13–18) and Advanced AI Track (18+).",
+    "Learn actual real AI, not just ChatGPT wrappers. Become a good AI engineer, learn to code, and ship fast. From PyTorch and local LLMs to building your own SaaS products.",
   keywords: [
-    "AI education",
-    "AI bootcamp",
+    "AI academy",
     "learn AI",
+    "AI engineer",
+    "learn to code",
+    "ship fast",
+    "real AI",
+    "machine learning bootcamp",
     "SaaS development",
-    "machine learning course",
-    "LLM training",
     "PyTorch course",
-    "AI for students",
+    "LLM training",
+    "AI for students", "AI for Kids", "AI for Teens", "AI for Adults", "AI for retired people",
+    "build AI agents"
   ],
+  openGraph: {
+    title: "AutonomousX AI Academy | Learn AI now",
+    description: "Learn actual real AI, not just ChatGPT wrappers. Become a good AI engineer, learn to code, and ship fast.",
+    type: "website",
+    locale: "en_US",
+    siteName: "AutonomousX AI Academy",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AutonomousX AI Academy | Become an AI Engineer",
+    description: "Learn to code and ship fast. Learn actual real AI, not just wrappers. Master PyTorch, LLMs, and build real SaaS products.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
