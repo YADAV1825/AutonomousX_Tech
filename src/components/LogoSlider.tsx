@@ -45,12 +45,12 @@ function LogoTrack({ logos, reverse = false }: { logos: LogoItem[]; reverse?: bo
         {doubled.map((logo, i) => (
           <div
             key={`${logo.alt}-${i}`}
-            className="flex-shrink-0 h-14 px-4 flex items-center justify-center glass rounded-xl hover:shadow-md transition-shadow"
+            className="flex-shrink-0 h-10 sm:h-12 lg:h-14 px-3 sm:px-4 flex items-center justify-center glass rounded-xl hover:shadow-md transition-shadow"
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-10 max-w-[140px] object-contain"
+              className="h-7 max-w-[100px] sm:h-8 sm:max-w-[120px] lg:h-10 lg:max-w-[140px] object-contain"
               loading="lazy"
             />
           </div>
@@ -62,13 +62,13 @@ function LogoTrack({ logos, reverse = false }: { logos: LogoItem[]; reverse?: bo
 
 export default function LogoSlider() {
   return (
-    <section className="py-16 relative overflow-hidden" id="logos">
+    <section className="py-10 sm:py-12 lg:py-16 relative overflow-hidden" id="logos">
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 lg:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 lg:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 mb-8">
-        <p className="text-center text-sm font-medium text-text-muted uppercase tracking-widest">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-6 sm:mb-8">
+        <p className="text-center text-xs sm:text-sm font-medium text-text-muted uppercase tracking-widest">
           Tools & Technologies You&apos;ll Master
         </p>
       </div>

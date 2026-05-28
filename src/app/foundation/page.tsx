@@ -11,11 +11,11 @@ export default function FoundationPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blush/40 via-white to-cream/30 pointer-events-none" />
         <div className="absolute top-10 right-10 w-96 h-96 rounded-full bg-gradient-to-br from-soft-red/10 to-rose/10 blur-3xl pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ export default function FoundationPage() {
               Ages 13–18 · School Students
             </span>
 
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 sm:mb-6">
               <span className="gradient-text-pink">Foundation</span> Track
             </h1>
 
@@ -33,11 +33,11 @@ export default function FoundationPage() {
               {track.tagline} From first website to running AI models  no prior coding required.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-10">
-              <Link href="#contact" className="btn-gradient no-underline">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10">
+              <Link href="#contact" className="btn-gradient no-underline text-center">
                 Book a Demo
               </Link>
-              <Link href="/#pricing" className="btn-outline no-underline">
+              <Link href="/#pricing" className="btn-outline no-underline text-center">
                 View Pricing
               </Link>
             </div>
@@ -68,8 +68,8 @@ export default function FoundationPage() {
       </section>
 
       {/* Curriculum */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

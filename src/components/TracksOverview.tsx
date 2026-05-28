@@ -46,8 +46,8 @@ const tracks = [
 
 export default function TracksOverview() {
   return (
-    <section className="py-24 relative" id="tracks">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative" id="tracks">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export default function TracksOverview() {
         >
           <div className="flex justify-center mb-4">
             <h2 className="inline-block p-1.5 rounded-full bg-gradient-to-r from-soft-red via-coral to-sky shadow-sm">
-              <span className="block px-8 py-3 text-3xl md:text-5xl font-extrabold text-black bg-white rounded-full">
+              <span className="block px-5 sm:px-8 py-2.5 sm:py-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black bg-white rounded-full">
                 Choose Your Track
               </span>
             </h2>
@@ -76,7 +76,7 @@ export default function TracksOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className={`glass-card p-8 relative group ${track.color === "pink"
+              className={`glass-card p-5 sm:p-6 lg:p-8 relative group ${track.color === "pink"
                   ? "hover:shadow-[0_8px_40px_rgba(232,64,87,0.1)]"
                   : "hover:shadow-[0_8px_40px_rgba(126,184,240,0.1)]"
                 }`}
@@ -124,7 +124,7 @@ export default function TracksOverview() {
               </div>
 
               {/* CTAs */}
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href={track.href}
                   className={`flex-1 text-center py-3 rounded-xl font-semibold text-sm no-underline transition-all ${track.color === "pink"
@@ -136,7 +136,7 @@ export default function TracksOverview() {
                 </Link>
                 <Link
                   href="#contact"
-                  className="px-5 py-3 rounded-xl font-semibold text-sm border border-border text-text-muted no-underline hover:border-soft-red hover:text-soft-red transition-all"
+                  className="px-5 py-3 rounded-xl font-semibold text-sm border border-border text-text-muted no-underline hover:border-soft-red hover:text-soft-red transition-all text-center"
                 >
                   Demo
                 </Link>

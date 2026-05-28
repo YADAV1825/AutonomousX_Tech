@@ -27,11 +27,11 @@ const experience = [
 
 export default function Instructor() {
   return (
-    <section className="py-24 relative" id="instructor">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative" id="instructor">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cream/40 to-transparent pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function Instructor() {
         >
           <div className="flex justify-center mb-4">
             <h2 className="inline-block p-1.5 rounded-full bg-gradient-to-r from-soft-red via-pink-400 to-rose shadow-sm">
-              <span className="block px-8 py-3 text-3xl md:text-5xl font-extrabold text-black bg-white rounded-full">
+              <span className="block px-5 sm:px-8 py-2.5 sm:py-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black bg-white rounded-full">
                 Your Instructor
               </span>
             </h2>
@@ -50,18 +50,18 @@ export default function Instructor() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-5 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
           {/* Profile Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-2"
+            className="lg:col-span-2"
           >
             <div className="glass-card p-8 text-center">
               {/* Avatar - Infinite Flip Animation */}
               <motion.div
-                className="relative w-80 h-87 mx-auto mb-6 perspective-[1000px]"
+                className="relative w-48 h-52 sm:w-56 sm:h-64 md:w-64 md:h-72 lg:w-80 lg:h-87 mx-auto mb-6 perspective-[1000px]"
                 animate={{ rotateY: [0, 0, 180, 180, 360] }}
                 transition={{
                   duration: 6,
@@ -157,7 +157,7 @@ export default function Instructor() {
           </motion.div>
 
           {/* Experience Cards */}
-          <div className="md:col-span-3 space-y-4">
+          <div className="lg:col-span-3 space-y-4">
             {experience.map((item, i) => (
               <motion.div
                 key={item.period}

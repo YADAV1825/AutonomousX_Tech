@@ -42,11 +42,11 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section className="py-24 relative" id="pricing">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative" id="pricing">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ice/30 to-transparent pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Pricing() {
         >
           <div className="flex justify-center mb-4">
             <h2 className="inline-block p-1.5 rounded-full bg-gradient-to-r from-soft-red via-coral to-sky shadow-sm">
-              <span className="block px-8 py-3 text-3xl md:text-5xl font-extrabold text-black bg-white rounded-full">
+              <span className="block px-5 sm:px-8 py-2.5 sm:py-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black bg-white rounded-full">
                 Transparent Pricing
               </span>
             </h2>
@@ -73,22 +73,23 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="relative"
+              className="relative pt-4"
             >
+              {/* Popular badge — outside overflow:hidden card */}
+              {plan.popular && (
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 z-10">
+                  <span className="px-4 py-1.5 rounded-full bg-gradient-to-r from-sky to-lavender text-white text-xs font-bold shadow-lg whitespace-nowrap">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+
               {/* Glow background */}
               <div
-                className={`pricing-card-glow glass-card p-8 h-full flex flex-col ${
+                className={`pricing-card-glow glass-card p-5 sm:p-6 lg:p-8 h-full flex flex-col ${
                   plan.popular ? "ring-2 ring-sky/20" : ""
                 }`}
               >
-                {/* Popular badge */}
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1.5 rounded-full bg-gradient-to-r from-sky to-lavender text-white text-xs font-bold shadow-lg">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
 
                 {/* Header */}
                 <div className="mb-6">
@@ -99,7 +100,7 @@ export default function Pricing() {
                 {/* Monthly pricing */}
                 <div className="mb-6 pb-6 border-b border-border">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-4xl font-extrabold text-text">
+                    <span className="text-3xl sm:text-4xl font-extrabold text-text">
                       ${plan.monthly.price}
                     </span>
                     <span className="text-text-muted text-sm">/month</span>

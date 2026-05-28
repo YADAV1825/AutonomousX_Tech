@@ -8,10 +8,10 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { label: "Twitter / X", href: "#", icon: "𝕏" },
-  { label: "LinkedIn", href: "#", icon: "in" },
-  { label: "GitHub", href: "#", icon: "GH" },
-  { label: "YouTube", href: "#", icon: "YT" },
+  { label: "Twitter / X", href: "https://x.com/yadav_1825", iconSrc: "/social/x.svg" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rohit-yadav-25535b256/", iconSrc: "/social/linkedin.svg" },
+  { label: "GitHub", href: "https://github.com/YADAV1825", iconSrc: "/social/github-svgrepo-com.svg" },
+  { label: "YouTube", href: "https://www.youtube.com/@Autonomous-X", iconSrc: "/social/youtube.svg" },
 ];
 
 export default function Footer() {
@@ -21,8 +21,8 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blush-dark to-transparent opacity-60" />
 
       <div className="glass-strong border-t border-white/30">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 lg:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 no-underline mb-4">
@@ -47,7 +47,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-text-muted no-underline transition-colors hover:text-soft-red"
+                      className="text-sm text-text-muted no-underline transition-colors hover:text-[#2563eb]"
                     >
                       {link.label}
                     </Link>
@@ -63,13 +63,13 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3 list-none p-0 m-0">
                 <li>
-                  <Link href="/foundation" className="text-sm text-text-muted no-underline transition-colors hover:text-soft-red">
+                  <Link href="/foundation" className="text-sm text-text-muted no-underline transition-colors hover:text-[#2563eb]">
                     Foundation Track
                   </Link>
                   <span className="block text-xs text-text-light mt-0.5">Ages 13–18 · School Students</span>
                 </li>
                 <li>
-                  <Link href="/advanced" className="text-sm text-text-muted no-underline transition-colors hover:text-soft-red">
+                  <Link href="/advanced" className="text-sm text-text-muted no-underline transition-colors hover:text-[#2563eb]">
                     Advanced AI Track
                   </Link>
                   <span className="block text-xs text-text-light mt-0.5">Ages 18+ · College & Graduates</span>
@@ -84,7 +84,7 @@ export default function Footer() {
               </h4>
               <a
                 href="mailto:yrohit1825@gmail.com"
-                className="text-sm text-soft-red no-underline font-medium hover:underline"
+                className="text-sm text-[#2563eb] no-underline font-medium hover:underline"
               >
                 yrohit1825@gmail.com
               </a>
@@ -94,10 +94,11 @@ export default function Footer() {
                   <a
                     key={s.label}
                     href={s.href}
-                    aria-label={s.label}
-                    className="w-10 h-10 rounded-xl glass flex items-center justify-center text-xs font-bold text-text-muted no-underline transition-all hover:text-soft-red hover:shadow-md hover:-translate-y-0.5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-xl glass flex items-center justify-center transition-all hover:shadow-md hover:-translate-y-0.5 group"
                   >
-                    {s.icon}
+                    <img src={s.iconSrc} alt={s.label} className="w-5 h-5 object-contain opacity-70 group-hover:opacity-100 transition-opacity" />
                   </a>
                 ))}
               </div>

@@ -99,37 +99,38 @@ export default function Schedule() {
   }, []);
 
   return (
-    <section className="py-24 relative" id="schedule">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative" id="schedule">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <div className="flex justify-center mb-4">
             <h2 className="inline-block p-1.5 rounded-full bg-gradient-to-r from-soft-red via-coral to-sky shadow-sm">
-              <span className="block px-8 py-3 text-3xl md:text-5xl font-extrabold text-black bg-white rounded-full">
+              <span className="block px-5 sm:px-8 py-2.5 sm:py-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black bg-white rounded-full">
                 Class Schedule
               </span>
             </h2>
           </div>
-          <p className="text-2xl md:text-3xl font-black max-w-3xl mx-auto leading-[1.6] mt-4 text-center">
-            <span className="bg-blush-dark text-text px-3 py-1 italic box-decoration-clone">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black max-w-3xl mx-auto leading-[1.4] sm:leading-[1.6] mt-4 text-center">
+            <span className="bg-blush-dark text-text px-2 sm:px-3 py-1 italic box-decoration-clone">
               Choose the batch that fits your lifestyle. Timings are automatically converted to your local timezone.
             </span>
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice/50 text-text-muted text-sm font-medium border border-border/50">
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice/50 text-text-muted text-xs sm:text-sm font-medium border border-border/50">
             <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
             Your detected timezone: <strong className="text-text">{userTimeZone}</strong>
           </div>
         </motion.div>
 
+        {/* Desktop Table — hidden on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card overflow-hidden"
+          className="glass-card overflow-hidden hidden md:block"
         >
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
@@ -165,6 +166,44 @@ export default function Schedule() {
               </tbody>
             </table>
           </div>
+        </motion.div>
+
+        {/* Mobile Card View — visible only on mobile */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="md:hidden space-y-3"
+        >
+          {batches.map((batch) => (
+            <div key={batch.id} className="glass-card p-4">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-bold text-text">{batch.id}</span>
+                <span className={`px-2.5 py-1 rounded-md text-xs font-bold ${
+                  batch.track === "Foundation AI" ? "bg-soft-red/10 text-soft-red" : "bg-sky/10 text-[#2563eb]"
+                }`}>
+                  {batch.track}
+                </span>
+              </div>
+
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between items-start gap-2">
+                  <span className="text-text-muted text-xs font-semibold uppercase tracking-wider">UTC</span>
+                  <span className="text-text-muted font-mono text-right text-xs">{batch.utcTiming}</span>
+                </div>
+                <div className="pt-2 border-t border-border/30">
+                  <div className="flex justify-between items-start gap-2 mb-1">
+                    <span className="text-[#2563eb] text-xs font-semibold uppercase tracking-wider">Your Days</span>
+                    <span className="text-text font-bold text-right">{localData[batch.id]?.days || "..."}</span>
+                  </div>
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="text-[#2563eb] text-xs font-semibold uppercase tracking-wider">Your Time</span>
+                    <span className="text-text font-bold font-mono text-right">{localData[batch.id]?.time || "..."}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -38,18 +38,18 @@ export default function DemoBooking() {
   };
 
   return (
-    <section className="py-24 relative" id="contact">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative" id="contact">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blush/20 to-transparent pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             Book a <span className="gradient-text">Demo</span>
           </h2>
           <p className="text-text-muted text-lg max-w-xl mx-auto">
@@ -61,11 +61,11 @@ export default function DemoBooking() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-5 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8"
         >
           {/* Form */}
-          <div className="md:col-span-3">
-            <form onSubmit={handleSubmit} className="glass-card p-8 space-y-6">
+          <div className="lg:col-span-3">
+            <form onSubmit={handleSubmit} className="glass-card p-5 sm:p-6 lg:p-8 space-y-5 sm:space-y-6">
               <div>
                 <label htmlFor="demo-name" className="block text-sm font-semibold text-text mb-2">
                   Name
@@ -76,7 +76,7 @@ export default function DemoBooking() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/60 border border-border text-text text-sm input-glow transition-all placeholder:text-text-light"
+                  className="w-full px-4 py-3 rounded-xl bg-white/60 border border-border text-text text-base input-glow transition-all placeholder:text-text-light"
                   placeholder="Your full name"
                 />
               </div>
@@ -91,7 +91,7 @@ export default function DemoBooking() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/60 border border-border text-text text-sm input-glow transition-all placeholder:text-text-light"
+                  className="w-full px-4 py-3 rounded-xl bg-white/60 border border-border text-text text-base input-glow transition-all placeholder:text-text-light"
                   placeholder="you@example.com"
                 />
               </div>
@@ -105,7 +105,7 @@ export default function DemoBooking() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/60 border border-border text-text text-sm input-glow transition-all resize-none placeholder:text-text-light"
+                  className="w-full px-4 py-3 rounded-xl bg-white/60 border border-border text-text text-base input-glow transition-all resize-none placeholder:text-text-light"
                   placeholder="Tell us about your learning goals..."
                 />
               </div>
@@ -130,7 +130,7 @@ export default function DemoBooking() {
           </div>
 
           {/* Contact info sidebar */}
-          <div className="md:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <div className="glass-card p-6">
               <h4 className="font-bold text-text mb-3">Get in Touch</h4>
               <div className="space-y-4">

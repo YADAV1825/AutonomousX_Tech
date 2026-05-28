@@ -91,6 +91,13 @@
     transform: translateY(-2px);
   }
 
+  /* Disable hover lift on touch devices for glass cards */
+  @media (hover: none) {
+    .glass-card:hover {
+      transform: none;
+    }
+  }
+
   .gradient-text {
     background: linear-gradient(135deg, var(--color-soft-red) 0%, var(--color-coral) 50%, var(--color-sky) 100%);
     -webkit-background-clip: text;
@@ -151,6 +158,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(232, 64, 87, 0.2);
+  min-height: 44px;
 }
 
 .btn-gradient:hover {
@@ -169,6 +177,7 @@
   font-size: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-height: 44px;
 }
 
 .btn-outline:hover {
@@ -219,16 +228,30 @@
 /* ===== LOGO CAROUSEL ===== */
 .logo-track {
   display: flex;
-  gap: 48px;
+  gap: 24px;
   animation: scrollLeft 30s linear infinite;
   width: max-content;
 }
 
 .logo-track-reverse {
   display: flex;
-  gap: 48px;
+  gap: 24px;
   animation: scrollRight 35s linear infinite;
   width: max-content;
+}
+
+@media (min-width: 640px) {
+  .logo-track,
+  .logo-track-reverse {
+    gap: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-track,
+  .logo-track-reverse {
+    gap: 48px;
+  }
 }
 
 .logo-track:hover,
@@ -313,4 +336,48 @@
 .comparison-x {
   color: #d1d5db;
   font-weight: 500;
+}
+
+/* ===== BODY SCROLL LOCK ===== */
+.body-scroll-locked {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== SCROLLBAR HIDE ===== */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== MOBILE DRAWER OVERLAY ===== */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 40;
+}
+
+/* ===== RESPONSIVE GLASS — reduce blur on mobile for perf ===== */
+@media (max-width: 640px) {
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .glass-strong {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .glass-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+  }
 }

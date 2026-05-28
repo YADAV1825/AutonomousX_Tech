@@ -128,8 +128,8 @@ export default function CurriculumTimeline() {
   const opacity = useTransform(scrollYProgress, [0, 0.05, 0.95, 1], [0, 1, 1, 0]);
 
   return (
-    <section className="py-24 relative" id="curriculum-timeline">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative" id="curriculum-timeline">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ export default function CurriculumTimeline() {
         >
           <div className="flex justify-center mb-4">
             <h2 className="inline-block p-1.5 rounded-full bg-gradient-to-r from-soft-red via-coral to-sky shadow-sm">
-              <span className="block px-8 py-3 text-3xl md:text-5xl font-extrabold text-black bg-white rounded-full">
+              <span className="block px-5 sm:px-8 py-2.5 sm:py-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black bg-white rounded-full">
                 Learning Roadmap
               </span>
             </h2>
@@ -192,7 +192,7 @@ export default function CurriculumTimeline() {
                 <div className="glass-card overflow-hidden">
                   {/* Quarter header */}
                   <div
-                    className={`px-6 py-5 border-b border-border/50 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-2 ${
+                    className={`px-4 py-4 sm:px-6 sm:py-5 border-b border-border/50 flex flex-col md:flex-row md:items-center md:justify-between gap-2 ${
                       block.color === "soft-red"
                         ? "bg-blush/40"
                         : block.color === "sky"
@@ -205,7 +205,7 @@ export default function CurriculumTimeline() {
                       <p className="text-sm text-text-muted mt-0.5 italic">{block.theme}</p>
                     </div>
                     <span
-                      className={`inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap self-start xl:self-auto ${
+                      className={`inline-flex items-center px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap self-start md:self-auto ${
                         block.color === "soft-red"
                           ? "bg-soft-red/10 text-soft-red"
                           : block.color === "sky"
@@ -220,7 +220,7 @@ export default function CurriculumTimeline() {
                   {/* Months grid */}
                   <div className={`grid gap-0 divide-y divide-border/30 ${block.months.length === 1 ? "" : ""}`}>
                     {block.months.map((month) => (
-                      <div key={month.name} className="px-6 py-5 hover:bg-cream/20 transition-colors">
+                      <div key={month.name} className="px-4 py-4 sm:px-6 sm:py-5 hover:bg-cream/20 transition-colors">
                         <div className="flex flex-col gap-4">
                           {/* Month name */}
                           <div>
