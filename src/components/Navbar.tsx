@@ -91,10 +91,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "glass-strong shadow-lg"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-strong ${
+        scrolled ? "shadow-lg" : "shadow-sm border-b border-border/10"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
@@ -204,7 +202,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-[min(320px,85vw)] z-50 glass-strong shadow-2xl lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-[100dvh] w-[min(320px,85vw)] z-50 bg-white/95 backdrop-blur-xl shadow-2xl lg:hidden overflow-y-auto"
               role="dialog"
               aria-modal="true"
               aria-label="Navigation menu"
@@ -219,15 +217,7 @@ export default function Navbar() {
                   />
                   <span className="text-sm font-bold text-text">AI Academy</span>
                 </Link>
-                <button
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/50 border border-border/50 text-text-muted hover:text-text transition-colors cursor-pointer"
-                  onClick={() => setMobileOpen(false)}
-                  aria-label="Close menu"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+                {/* Removed extra X button since hamburger morphs into X */}
               </div>
 
               {/* Nav links */}

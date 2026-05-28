@@ -11,7 +11,7 @@ export default function AdvancedPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
+      <section className="relative pt-44 pb-12 sm:pt-48 sm:pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-ice/40 via-white to-cream/20 pointer-events-none" />
         <div className="absolute top-10 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-sky/10 to-lavender/10 blur-3xl pointer-events-none" />
 

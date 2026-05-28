@@ -97,12 +97,12 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 lg:py-32 flex w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-44 pb-20 sm:pt-48 sm:pb-24 lg:pt-48 lg:pb-32 flex w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl lg:max-w-3xl"
+          className="max-w-2xl lg:max-w-3xl flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0"
         >
           {/* Academy badge */}
           <motion.div
@@ -145,7 +145,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 w-full sm:w-auto justify-center lg:justify-start"
           >
             <Link href="#contact" className="btn-gradient text-base no-underline text-center">
               Book a Demo
