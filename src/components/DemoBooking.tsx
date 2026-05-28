@@ -33,7 +33,7 @@ export default function DemoBooking() {
         });
       }
     } catch (error) {
-      console.error(error);
+      
     }
   };
 
