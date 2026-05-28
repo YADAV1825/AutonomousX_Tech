@@ -12,15 +12,13 @@ const taglines = [
 ];
 
 const achievements = [
-  { title: "Founder, AutonomousX AI", desc: "Built 25+ LLMs from scratch, Hugging Face", icon: "🤗" },
-  { title: "Founder, AI Academy", desc: "AutonomousX AI Academy", icon: "🎓" },
-  { title: "Google TRC Recipient", desc: "Exclusive compute grant", icon: <img src="/images/google.jpg" alt="Google" className="w-5 h-5 rounded-full object-cover shadow-sm" />, highlight: true },
-  { title: "AMD MI300X Access", desc: "Awarded top-tier GPU access", icon: "🚀" },
-  { title: "IIT JEE MAINS", desc: "98.72 %ile", icon: "🏆" },
-  { title: "KVPY AIR 2590", desc: "National fellowship", icon: "🏅" },
-  { title: "IOQM Merit", desc: "Mathematics olympiad", icon: "⭐" },
-  { title: "B.Tech CSE", desc: "NIT Jalandhar", icon: "🏫" },
-  { title: "OS Level AI Agents", desc: "Built full AI systems", icon: "💻" }
+  { title: "Founder, AutonomousX AI", desc: "Built 25+ LLMs from scratch, Hugging Face", icon: <img src="/images/autonomousX.png" alt="AutonomousX" className="h-7 rounded-full object-cover shadow-sm" /> },
+  { title: "Google TRC Recipient", desc: "Exclusive compute grant for TPUs", icon: <img src="/images/google.jpg" alt="Google" className="h-7 rounded-full object-cover shadow-sm" />, highlight: true },
+  { title: "IIT JEE MAINS", desc: "98.72 %ile", icon: <img src="/images/JEE.png" alt="JEE" className="h-7 rounded-full object-cover shadow-sm" /> },
+  { title: "KVPY AIR 2590", desc: "National fellowship", icon: <img src="/images/kvpy.png" alt="KVPY" className="h-7 rounded-full object-cover shadow-sm" /> },
+  { title: "Founder, AutonomousX AI Academy", desc: "AutonomousX AI Academy", icon: <img src="/images/autonomousX.png" alt="AutonomousX" className="h-7 rounded-full object-cover shadow-sm" /> },
+  { title: "IOQM Merit", desc: "Mathematics olympiad", icon: <img src="/images/IOQM.jpg" alt="IOQM" className="h-7 rounded-full object-cover shadow-sm" /> },
+  { title: "Bachelors in Information Technology", desc: "NIT Jalandhar", icon: <img src="/images/nit_logo.png" alt="NIT" className="h-7 rounded-full object-cover shadow-sm" /> }
 ];
 
 export default function Hero() {
@@ -59,7 +57,7 @@ export default function Hero() {
       {/* Floating Ticker Window (Right Side) */}
       <motion.div
         style={{ y, opacity }}
-        className="hidden lg:flex absolute top-1/4 right-[5%] xl:right-[10%] w-[320px] h-[400px] flex-col glass-card overflow-hidden border-2 border-white/60 shadow-2xl z-20 backdrop-blur-xl bg-white/40 rounded-3xl"
+        className="hidden lg:flex absolute top-[20%] right-[5%] xl:right-[10%] w-[420px] h-[500px] flex-col glass-card overflow-hidden border-2 border-white/60 shadow-2xl z-20 backdrop-blur-xl bg-white/40 rounded-3xl"
       >
         <div className="p-4 border-b border-white/40 bg-white/50 backdrop-blur-md shrink-0 flex items-center justify-between">
           <h3 className="font-extrabold text-text text-sm flex items-center gap-2">
@@ -68,34 +66,33 @@ export default function Hero() {
           </h3>
           <span className="text-[10px] uppercase font-bold text-text-muted tracking-widest bg-white/50 px-2 py-0.5 rounded-full">Active</span>
         </div>
-        
+
         <div className="relative flex-1 overflow-hidden">
-           {/* Fade overlays */}
-           <div className="absolute top-0 w-full h-10 bg-gradient-to-b from-white/90 to-transparent z-10 pointer-events-none" />
-           <div className="absolute bottom-0 w-full h-12 bg-gradient-to-t from-white/90 to-transparent z-10 pointer-events-none" />
-           
-           <motion.div
-             className="flex flex-col gap-3 px-4 py-6"
-             animate={{ y: ["0%", "-50%"] }}
-             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-           >
-             {[...achievements, ...achievements].map((item, idx) => (
-                <div 
-                  key={idx} 
-                  className={`p-3.5 rounded-2xl flex items-start gap-3 backdrop-blur-md shadow-sm transition-all ${
-                    item.highlight 
-                      ? 'bg-gradient-to-r from-blush/80 to-ice/80 border border-soft-red/40' 
-                      : 'bg-white/80 border border-white/60 hover:bg-white'
+          {/* Fade overlays */}
+          <div className="absolute top-0 w-full h-10 bg-gradient-to-b from-white/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 w-full h-12 bg-gradient-to-t from-white/90 to-transparent z-10 pointer-events-none" />
+
+          <motion.div
+            className="flex flex-col gap-3 px-4 py-6"
+            animate={{ y: ["0%", "-50%"] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          >
+            {[...achievements, ...achievements].map((item, idx) => (
+              <div
+                key={idx}
+                className={`p-3.5 rounded-2xl flex items-start gap-3 backdrop-blur-md shadow-sm transition-all ${item.highlight
+                    ? 'bg-gradient-to-r from-blush/80 to-ice/80 border border-soft-red/40'
+                    : 'bg-white/80 border border-white/60 hover:bg-white'
                   }`}
-                >
-                   <div className="mt-0.5 flex-shrink-0 text-lg flex items-center justify-center w-6">{item.icon}</div>
-                   <div>
-                     <div className="font-bold text-[13px] text-text leading-tight">{item.title}</div>
-                     <div className="text-[11px] text-text-muted mt-0.5 leading-snug font-medium">{item.desc}</div>
-                   </div>
+              >
+                <div className="mt-0.5 flex-shrink-0 text-lg flex items-center justify-center w-6">{item.icon}</div>
+                <div>
+                  <div className="font-bold text-[13px] text-text leading-tight">{item.title}</div>
+                  <div className="text-[11px] text-text-muted mt-0.5 leading-snug font-medium">{item.desc}</div>
                 </div>
-             ))}
-           </motion.div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </motion.div>
 
@@ -114,10 +111,10 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass mb-8"
           >
-            <img 
-              src="/images/autonomousX.png" 
-              alt="AutonomousX" 
-              className="h-16 w-16 object-cover rounded-full shadow-sm" 
+            <img
+              src="/images/autonomousX.png"
+              alt="AutonomousX"
+              className="h-16 w-16 object-cover rounded-full shadow-sm"
             />
             <span className="text-xl font-bold text-text">AI Academy</span>
           </motion.div>

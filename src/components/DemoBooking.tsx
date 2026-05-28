@@ -7,12 +7,34 @@ export default function DemoBooking() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Demo booking submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const response = await fetch("/api/demo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+
+        setTimeout(() => setSubmitted(false), 15000);
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -101,7 +123,7 @@ export default function DemoBooking() {
                   animate={{ opacity: 1, y: 0 }}
                   className="text-sm text-center text-green-600 font-medium"
                 >
-                  Thank you! We&apos;ll get back to you within 24 hours.
+                  <strong>Your Message was sent Successfully!</strong><br></br>Thank you! We&apos;ll get back to you within 24 hours.
                 </motion.p>
               )}
             </form>

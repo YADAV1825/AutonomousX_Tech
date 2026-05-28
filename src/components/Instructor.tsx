@@ -61,18 +61,18 @@ export default function Instructor() {
             <div className="glass-card p-8 text-center">
               {/* Avatar - Infinite Flip Animation */}
               <motion.div
-                className="relative w-32 h-32 mx-auto mb-6 perspective-[1000px]"
+                className="relative w-80 h-87 mx-auto mb-6 perspective-[1000px]"
                 animate={{ rotateY: [0, 0, 180, 180, 360] }}
-                transition={{ 
-                  duration: 6, 
-                  repeat: Infinity, 
-                  ease: "easeInOut", 
-                  times: [0, 0.4, 0.5, 0.9, 1] 
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  times: [0, 0.4, 0.5, 0.9, 1]
                 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
                 {/* Front Image */}
-                <div 
+                <div
                   className="absolute inset-0 w-full h-full rounded-full overflow-hidden shadow-xl border-4 border-white bg-white"
                   style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
                 >
@@ -80,20 +80,23 @@ export default function Instructor() {
                 </div>
 
                 {/* Back Image (Anime) */}
-                <div 
+                <div
                   className="absolute inset-0 w-full h-full rounded-full overflow-hidden shadow-xl border-4 border-white bg-white"
-                  style={{ 
-                    backfaceVisibility: "hidden", 
-                    WebkitBackfaceVisibility: "hidden", 
-                    transform: "rotateY(180deg)" 
+                  style={{
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
+                    transform: "rotateY(180deg)"
                   }}
                 >
-                  <img src="/images/anime_rohit.png" alt="Anime Rohit" className="w-full h-full object-cover" />
+                  <img src="/images/anime.png" alt="Anime Rohit" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
 
               <h3 className="text-2xl font-bold text-text mb-1">Rohit Yadav</h3>
-              <p className="text-sm text-text-muted font-semibold">Founder of AutonomousX AI</p>
+              <p className="flex items-center justify-center gap-1.5 text-sm text-text-muted font-semibold">
+                <img src="/images/autonomousX.png" alt="AutonomousX" className="w-4 h-4 rounded-full object-cover" />
+                Founder of AutonomousX AI
+              </p>
               <p className="text-xs text-text-muted mb-4">TPU & JAX Training | AutonomousX AI Academy</p>
 
               {/* Badges/Links Row */}
@@ -110,7 +113,6 @@ export default function Instructor() {
                 </div>
                 {/* Hugging Face */}
                 <a href="https://huggingface.co/AutonomousX" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-border shadow-sm hover:shadow-md transition-shadow no-underline text-text">
-                  <span className="text-base leading-none">🤗</span>
                   <span className="text-[11px] font-bold">Hugging Face</span>
                 </a>
                 {/* Resume */}
@@ -123,24 +125,34 @@ export default function Instructor() {
               </div>
 
               {/* Achievements & Education */}
-              <div className="text-left bg-cream/30 p-4 rounded-xl border border-border/50 text-sm mb-4 space-y-3">
-                <p className="flex items-start gap-2 m-0">
-                  <span className="text-sky mt-0.5">🎓</span>
+              <div className="text-left bg-white/60 backdrop-blur-sm p-5 rounded-2xl border border-gray-200 shadow-lg shadow-black/5 text-sm mb-6 transition-all hover:shadow-xl">
+                <div className="flex items-start gap-3 mb-3">
+                  <img src="/images/nit_logo.png" alt="NIT" className="w-5 h-5 rounded-full object-cover flex-shrink-0 mt-0.5" />
                   <span className="leading-tight">B.Tech in IT, <strong>NIT Jalandhar</strong></span>
-                </p>
-                <p className="flex items-start gap-2 m-0">
-                  <span className="text-soft-red mt-0.5">🏆</span>
-                  <span className="leading-tight">
-                    <strong>KVPY AIR 2590</strong> <br/>
-                    <strong>JEE MAINS 98.7%ile</strong> <br/>
-                    <strong>IOQM Merit</strong>
-                  </span>
-                </p>
+                </div>
+                <hr className="border-t-2 border-black/20 my-3" />
+                <div className="flex items-start gap-3 mb-3">
+                  <img src="/images/kvpy.png" alt="KVPY" className="w-5 h-5 rounded-full object-cover flex-shrink-0 mt-0.5" />
+                  <span className="leading-tight"><strong>KVPY AIR 2590</strong></span>
+                </div>
+                <hr className="border-t-2 border-black/20 my-3" />
+                <div className="flex items-start gap-3 mb-3">
+                  <img src="/images/JEE.png" alt="JEE" className="w-5 h-5 rounded-full object-cover flex-shrink-0 mt-0.5" />
+                  <span className="leading-tight"><strong>JEE MAINS 98.7%ile</strong></span>
+                </div>
+                <hr className="border-t-2 border-black/20 my-3" />
+                <div className="flex items-start gap-3">
+                  <img src="/images/IOQM.jpg" alt="IOQM" className="w-5 h-5 rounded-full object-cover flex-shrink-0 mt-0.5" />
+                  <span className="leading-tight"><strong>IOQM Merit</strong></span>
+                </div>
               </div>
 
               <p className="text-sm text-text-muted leading-relaxed">
-                AI engineer, educator, and mentor. Passionate about making cutting-edge AI accessible to everyone — from school students to working professionals. <strong>I build LLMs from scratch.</strong>
+                AI engineer, educator, and mentor. Passionate about making cutting-edge AI accessible to everyone from school students to working professionals.
               </p>
+              <h6>
+                <strong>I build LLMs from scratch</strong>
+              </h6>
             </div>
           </motion.div>
 
@@ -158,8 +170,8 @@ export default function Instructor() {
                 <div className="flex items-start gap-4">
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${i % 2 === 0
-                        ? "bg-blush text-soft-red"
-                        : "bg-ice text-sky"
+                      ? "bg-blush text-soft-red"
+                      : "bg-ice text-sky"
                       }`}
                   >
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
