@@ -160,16 +160,22 @@ export default function Navbar() {
       {!mobileOpen && (
         <div className="lg:hidden overflow-x-auto scrollbar-hide border-t border-border/30">
           <nav
-            className="flex items-center gap-1.5 px-4 py-2 w-max min-w-full"
+            className="flex items-center gap-1 px-2 py-2 w-max min-w-full mx-auto justify-center"
             aria-label="Quick navigation"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex-shrink-0 px-3.5 py-1.5 text-xs font-semibold text-text-muted bg-white/50 hover:bg-white/80 hover:text-text rounded-full transition-all no-underline border border-border/40 whitespace-nowrap"
+                className="flex-shrink-0 px-2.5 py-1 text-[11px] font-semibold text-text-muted bg-white/50 hover:bg-white/80 hover:text-text rounded-xl transition-all no-underline border border-border/40 text-center flex flex-col items-center justify-center leading-[1.2]"
               >
-                {link.label}
+                {link.label === "Foundation Track" ? (
+                  <><span>Foundation</span><span>Track</span></>
+                ) : link.label === "Advanced AI Track" ? (
+                  <><span>Advanced AI</span><span>Track</span></>
+                ) : (
+                  link.label
+                )}
               </Link>
             ))}
           </nav>
