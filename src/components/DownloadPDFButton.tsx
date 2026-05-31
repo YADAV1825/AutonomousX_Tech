@@ -6,7 +6,7 @@ import { comparisonFeatures } from "@/data/comparison";
 
 /* ── schedule batch data ── */
 const batches = [
-  { id: "B1", track: "Foundation AI", days: "Mon, Tue, Wed, Thu", utcTiming: "10:30 PM – 12:30 AM UTC" },
+  { id: "B1", track: "Foundation AI", days: "Mon, Tue, Wed, Thu", utcTiming: "11:00 AM – 01:00 PM UTC" },
   { id: "B2", track: "Foundation AI", days: "Mon, Tue, Wed, Thu", utcTiming: "04:30 AM – 06:30 AM UTC" },
   { id: "B3", track: "Foundation AI", days: "Mon, Tue, Wed, Thu", utcTiming: "09:00 AM – 11:00 AM UTC" },
   { id: "B4", track: "Advanced AI",   days: "Mon, Tue, Wed, Thu", utcTiming: "12:00 PM – 02:00 PM UTC" },
@@ -378,7 +378,7 @@ async function generatePdf() {
   /* ═══════════════════════════════════════════════════ */
   newPage();
   let scheduleY = drawSectionTitle("Class Schedule", 24);
-  scheduleY = drawSubtitle(`Timings converted to your timezone: ${tz}`, scheduleY);
+  scheduleY = drawSubtitle(`Please choose the batch preferred to your timings. Timings converted to your timezone: ${tz}`, scheduleY);
 
   const schedRows = batches.map((b) => {
     const local = convertUtcToLocal(b.utcTiming, b.days);
@@ -414,7 +414,7 @@ async function generatePdf() {
       lineWidth: 0.3,
     },
     columnStyles: {
-      0: { cellWidth: 14, halign: "center", fontStyle: "bold" },
+      0: { cellWidth: 18, halign: "center", fontStyle: "bold" },
       1: { cellWidth: 28 },
       4: { fillColor: [...ICE_BG] as [number, number, number], fontStyle: "bold" },
       5: { fillColor: [...ICE_BG] as [number, number, number], fontStyle: "bold" },
