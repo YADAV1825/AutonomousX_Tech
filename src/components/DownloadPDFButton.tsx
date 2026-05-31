@@ -442,15 +442,8 @@ async function generatePdf() {
   let y = drawSectionTitle("Learning Roadmap", 24);
   y = drawSubtitle("Bootcamp kicks off June 2026. Full batch runs July 2026 - March 2027.", y);
 
-  let rIdx = 0;
   for (const block of roadmap) {
-    if (rIdx > 0) {
-      newPage();
-      y = 20;
-    } else {
-      y = ensureSpace(20 + block.months.length * 14, y);
-    }
-    rIdx++;
+    y = ensureSpace(20 + block.months.length * 14, y);
 
     // Quarter header
     doc.setFillColor(block.color[0], block.color[1], block.color[2]);
