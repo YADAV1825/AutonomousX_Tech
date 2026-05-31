@@ -217,11 +217,11 @@ async function generatePdf() {
   tocY += 10;
 
   const tocItems = [
-    "1.  Foundation Track Curriculum",
-    "2.  Advanced AI Track Curriculum",
-    "3.  Learning Roadmap",
-    "4.  Compare Features",
-    `5.  Class Schedule (${tz})`,
+    `1.  Class Schedule (${tz})`,
+    "2.  Foundation Track Curriculum",
+    "3.  Advanced AI Track Curriculum",
+    "4.  Learning Roadmap",
+    "5.  Compare Features",
   ];
 
   doc.setFontSize(11);
@@ -264,8 +264,15 @@ async function generatePdf() {
     doc.text(sanitizeText(`Pace: ${track.pace.live}  |  ${track.pace.assignment}`), pageW / 2, y, { align: "center" });
     y += 10;
 
+    let qIdx = 0;
     for (const quarter of track.quarters) {
-      y = ensureSpace(30, y);
+      if (qIdx > 0) {
+        newPage();
+        y = 20;
+      } else {
+        y = ensureSpace(30, y);
+      }
+      qIdx++;
 
       // Quarter header bar
       doc.setFillColor(accent[0], accent[1], accent[2]);
@@ -366,6 +373,65 @@ async function generatePdf() {
     }
   };
 
+  /* ═══════════════════════════════════════════════════ */
+  /* CLASS SCHEDULE                                      */
+  /* ═══════════════════════════════════════════════════ */
+  newPage();
+  let scheduleY = drawSectionTitle("Class Schedule", 24);
+  scheduleY = drawSubtitle(`Timings converted to your timezone: ${tz}`, scheduleY);
+
+  const schedRows = batches.map((b) => {
+    const local = convertUtcToLocal(b.utcTiming, b.days);
+    return [
+      sanitizeText(b.id), 
+      sanitizeText(b.track), 
+      sanitizeText(b.days), 
+      sanitizeText(b.utcTiming), 
+      sanitizeText(local.days), 
+      sanitizeText(local.time)
+    ];
+  });
+
+  autoTable(doc, {
+    startY: scheduleY,
+    margin: { left: marginL, right: marginR },
+    head: [["Batch", "Track", "UTC Days", "Global Time (UTC)", "Your Days", "Your Time"]],
+    body: schedRows,
+    theme: "grid",
+    headStyles: {
+      fillColor: [...SKY] as [number, number, number],
+      textColor: [...WHITE],
+      fontStyle: "bold",
+      fontSize: 8,
+      cellPadding: 3.5,
+      halign: "center",
+    },
+    bodyStyles: {
+      fontSize: 8,
+      cellPadding: 3,
+      textColor: [...TEXT] as [number, number, number],
+      lineColor: [229, 231, 235],
+      lineWidth: 0.3,
+    },
+    columnStyles: {
+      0: { cellWidth: 14, halign: "center", fontStyle: "bold" },
+      1: { cellWidth: 28 },
+      4: { fillColor: [...ICE_BG] as [number, number, number], fontStyle: "bold" },
+      5: { fillColor: [...ICE_BG] as [number, number, number], fontStyle: "bold" },
+    },
+  });
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  scheduleY = (doc as any).lastAutoTable.finalY + 12;
+
+  // Timezone indicator
+  doc.setFillColor(...ICE_BG);
+  doc.roundedRect(marginL, scheduleY, contentW, 10, 3, 3, "F");
+  doc.setFontSize(8);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(37, 99, 235);
+  doc.text(`*  Your detected timezone: ${tz}  -  "Your Days" and "Your Time" columns are auto-converted.`, marginL + 6, scheduleY + 6.5);
+
   renderTrack("foundation", RED);
   renderTrack("advanced", SKY);
 
@@ -376,8 +442,15 @@ async function generatePdf() {
   let y = drawSectionTitle("Learning Roadmap", 24);
   y = drawSubtitle("Bootcamp kicks off June 2026. Full batch runs July 2026 - March 2027.", y);
 
+  let rIdx = 0;
   for (const block of roadmap) {
-    y = ensureSpace(20 + block.months.length * 14, y);
+    if (rIdx > 0) {
+      newPage();
+      y = 20;
+    } else {
+      y = ensureSpace(20 + block.months.length * 14, y);
+    }
+    rIdx++;
 
     // Quarter header
     doc.setFillColor(block.color[0], block.color[1], block.color[2]);
@@ -480,64 +553,7 @@ async function generatePdf() {
     },
   });
 
-  /* ═══════════════════════════════════════════════════ */
-  /* CLASS SCHEDULE                                      */
-  /* ═══════════════════════════════════════════════════ */
-  newPage();
-  y = drawSectionTitle("Class Schedule", 24);
-  y = drawSubtitle(`Timings converted to your timezone: ${tz}`, y);
 
-  const schedRows = batches.map((b) => {
-    const local = convertUtcToLocal(b.utcTiming, b.days);
-    return [
-      sanitizeText(b.id), 
-      sanitizeText(b.track), 
-      sanitizeText(b.days), 
-      sanitizeText(b.utcTiming), 
-      sanitizeText(local.days), 
-      sanitizeText(local.time)
-    ];
-  });
-
-  autoTable(doc, {
-    startY: y,
-    margin: { left: marginL, right: marginR },
-    head: [["Batch", "Track", "UTC Days", "Global Time (UTC)", "Your Days", "Your Time"]],
-    body: schedRows,
-    theme: "grid",
-    headStyles: {
-      fillColor: [...SKY] as [number, number, number],
-      textColor: [...WHITE],
-      fontStyle: "bold",
-      fontSize: 8,
-      cellPadding: 3.5,
-      halign: "center",
-    },
-    bodyStyles: {
-      fontSize: 8,
-      cellPadding: 3,
-      textColor: [...TEXT] as [number, number, number],
-      lineColor: [229, 231, 235],
-      lineWidth: 0.3,
-    },
-    columnStyles: {
-      0: { cellWidth: 14, halign: "center", fontStyle: "bold" },
-      1: { cellWidth: 28 },
-      4: { fillColor: [...ICE_BG] as [number, number, number], fontStyle: "bold" },
-      5: { fillColor: [...ICE_BG] as [number, number, number], fontStyle: "bold" },
-    },
-  });
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  y = (doc as any).lastAutoTable.finalY + 12;
-
-  // Timezone indicator
-  doc.setFillColor(...ICE_BG);
-  doc.roundedRect(marginL, y, contentW, 10, 3, 3, "F");
-  doc.setFontSize(8);
-  doc.setFont("helvetica", "normal");
-  doc.setTextColor(37, 99, 235);
-  doc.text(`*  Your detected timezone: ${tz}  -  "Your Days" and "Your Time" columns are auto-converted.`, marginL + 6, y + 6.5);
 
   /* ═══════════════════════════════════════════════════ */
   /* FOOTER ON ALL PAGES                                 */
