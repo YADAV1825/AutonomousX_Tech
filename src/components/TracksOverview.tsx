@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import DownloadPDFButton from "./DownloadPDFButton";
 
 const tracks = [
   {
@@ -62,9 +63,10 @@ export default function TracksOverview() {
               </span>
             </h2>
           </div>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">
+          <p className="text-text-muted text-lg max-w-2xl mx-auto mb-8">
             Two paths. One mission: help you build real things with AI  websites, apps, and production-ready products.
           </p>
+          <DownloadPDFButton />
         </motion.div>
 
         {/* Cards */}

@@ -3,6 +3,7 @@
 import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { comparisonFeatures } from "@/data/comparison";
+import DownloadPDFButton from "./DownloadPDFButton";
 
 export default function ComparisonTable() {
   // Group by category
@@ -24,9 +25,10 @@ export default function ComparisonTable() {
               </span>
             </h2>
           </div>
-          <p className="text-text-muted text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="text-text-muted text-base sm:text-lg max-w-2xl mx-auto mb-8">
             See exactly what each track covers. The Advanced Track includes everything in Foundation — and much more.
           </p>
+          <DownloadPDFButton />
         </motion.div>
 
         {/* Desktop Table — hidden on mobile */}

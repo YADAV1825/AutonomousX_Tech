@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import DownloadPDFButton from "./DownloadPDFButton";
 
 interface QuarterBlock {
   quarter: string;
@@ -143,10 +144,11 @@ export default function CurriculumTimeline() {
               </span>
             </h2>
           </div>
-          <p className="text-text-muted text-lg max-w-2xl mx-auto">
+          <p className="text-text-muted text-lg max-w-2xl mx-auto mb-8">
             Bootcamp kicks off <strong className="text-text">June 2026</strong>. Full batch runs{" "}
             <strong className="text-text">July 2026 → March 2027</strong>. Here&apos;s what you&apos;ll learn each quarter.
           </p>
+          <DownloadPDFButton />
         </motion.div>
 
         {/* Timeline Container */}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import DownloadPDFButton from "./DownloadPDFButton";
 
 interface Batch {
   id: string;
@@ -119,9 +120,12 @@ export default function Schedule() {
               Choose the batch that fits your lifestyle. Timings are automatically converted to your local timezone.
             </span>
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice/50 text-text-muted text-xs sm:text-sm font-medium border border-border/50">
-            <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
-            Your detected timezone: <strong className="text-text">{userTimeZone}</strong>
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice/50 text-text-muted text-xs sm:text-sm font-medium border border-border/50">
+              <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
+              Your detected timezone: <strong className="text-text">{userTimeZone}</strong>
+            </div>
+            <DownloadPDFButton />
           </div>
         </motion.div>
 
